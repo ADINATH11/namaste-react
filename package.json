@@ -1,0 +1,31 @@
+{
+  "name": "react-training",
+  "version": "1.0.0",
+  "description": "This is React training",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ADINATH11/namaste-react.git"
+  },
+  "keywords": [
+    "adinath",
+    "react"
+  ],
+  "author": "Adinath Pawar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ADINATH11/namaste-react/issues"
+  },
+  "homepage": "https://github.com/ADINATH11/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
