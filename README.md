@@ -48,3 +48,26 @@ Episode 2: Igniting the app
     -HTTPs using the "npx package index.html"
     -tree shaking -remove the unused code
 
+
+Episode 3:Laying the Foundation
+
+-scripts in package.json- here we can write the scripts such as "start":"parcel index.html" and can run the cmd "npm run start" or "npm start", which will 
+     give the same result as the "npx parcel index.html". 
+    -This is simple way where you can save yurself from writing the long cmds and write the scripts for the same.
+-JSX(javascript syntax)- It is not a HTML but is a XML like syntax.
+    -JSX is not a pure javascript , it is transpiled before it reaches the browser.It is done by parcel using the BABEL
+    -In JSX, the camelcase is used for the attribute for the tags also the class in HTML is equivalent to the className in the JSX.
+    -For multiple line code in the JSX you have encode it in the ().
+-BABEL-Babel is  a JS compiler.
+-In JS const fn = () =>true; is same as const fn2= () =>{ return true};
+-React Component-
+    -there two types of the react component i.e class based component and functional component.
+    -The name of the functional component is always started with capital letter.
+    -The render method calls the react functional component by "render(<ComponentName/>)" and the react element as "render(elementName)".
+    -Component Composition is nothing but the component inside the component.
+    -If you want to access the JS expression in the JSX of the component you can do it by writing it in the {}.
+    -So if you want to add react element inside the {} in the JSX.
+    -{FunctionName()},<FunctionName/>,<FuntionName></FunctionName> all can be used for the component composition.
+    -Whenever the {} inside get executes in the JSX it sanitized first so any malicious JS code does not get execute here.
+    -there can be the infinite loop situation whenever we call the another component inside the component, which has this component inside it.
+    -We can try any composition like we can call elment in component vice versa or component in component or element in element.
