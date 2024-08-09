@@ -3,6 +3,8 @@
 Episode 1:Inception
 -React(object) => Browser(HTML)
 -arguments of the ReactCreateElement are tag, props(attributes), children
+-React Element Example:React.createElement("h1", { key: "contact.id" }, "Hello World");
+-React Component Example:  
 -elements are nothing but the objects.
 -order of the script files matter.
 -nesting of sibling elements done with the help of the array.
@@ -37,6 +39,7 @@ Episode 2: Igniting the app
         -Parcel caches everything it builds to disk. If you restart the dev server, Parcel will only rebuild files that have changed since the last time it ran.
     -image optimization
     -Minification-
+        -Minification reduces the file size of your output bundles by removing whitespace, renaming variables to shorter names, and many other optimizations.
     -Bundling
         -When multiple parts of your application depend on the same common modules, they are automatically deduplicated into a separate bundle. 
         -This allows commonly used dependencies to be loaded in parallel with your application code and cached separately by the browser.
@@ -45,7 +48,7 @@ Episode 2: Igniting the app
     -code splitting
     -Differential Bundling - support older browsers
     -Diagnostics -shows the realtime errors and where they are caused
-    -HTTPs using the "npx package index.html"
+    -HTTPs using the "parcel src/index.html --https"
     -tree shaking -remove the unused code
 
 
@@ -56,7 +59,7 @@ Episode 3:Laying the Foundation
     -This is simple way where you can save yurself from writing the long cmds and write the scripts for the same.
 -JSX(javascript syntax)- It is not a HTML but is a XML like syntax.
     -JSX is not a pure javascript , it is transpiled before it reaches the browser.It is done by parcel using the BABEL
-    -In JSX, the camelcase is used for the attribute for the tags also the 'class' in HTML is equivalent to the 'className' in the JSX.
+    -In JSX, the camelcase is used for the attribute of the tags also the 'class' in HTML is equivalent to the 'className' in the JSX.
     -For multiple line code in the JSX you have encode it in the ().
 -BABEL-Babel is  a JS compiler.
 -In JS const fn = () =>true; is same as const fn2= () =>{ return true};
@@ -84,3 +87,25 @@ Episode 4: Talk is cheap,show the code
 -this makes the react to identify each element uniquely and whenever there is change inside the result data it render all the elements but will render which are were not rendered earlier
 -index as a key is a anti pattern.
 -not using the keys (not acceptable)<<<<<< using index as a keys <<<<<< using the unique id as a keys(best practices).
+
+
+Episode 5: Let's Hook up!
+-The best practice - separate component with separate file.
+-There are two type of export import in the JS
+    -export default component
+        -you can export only one component, but you can use both the exports in one file.
+        -here the imports appear like import resLogo from "../utils/constants";
+    -export named component
+        -ypu can export as many as componets/constants in one file using this.
+        -you just have to add the export in front of the component.
+        -here the imports appear like import { appLogo } from "../utils/constants";
+-React Hooks 
+-there are many react hoooks but he most used are the following
+    -useState()
+    -is is simple to make any variable into a state variable with help of the useState()
+    -It returns the destructured array, which consist of the variable and function starting with the set key (best practice not any compultion),and any default value you for the variable can be given inside the useState([{}]).
+    -whenever you want to change the variable values and make changes on the page it can be done using the setvariable function by giving it the updated variable value inside it.
+    -the updated value will be rerendered on the page,this done with the help of the reconcilation algorithm (React fiber) which essentially uses the difference algorithm which marks the difference between the previous DOM and the updated DOM(virtual DOM which contains the updated values of the state variable),and then the component which contains the change is rerendered.
+    -This is one of the reason which makes the React fast and poweful because React does the efficient DOM manipulation compare to other libraries and frameworks. It keeps the data layer and page in sync.
+    -useEffects()
+
