@@ -109,3 +109,24 @@ Episode 5: Let's Hook up!
     -This is one of the reason which makes the React fast and poweful because React does the efficient DOM manipulation compare to other libraries and frameworks. It keeps the data layer and page in sync.
     -useEffects()
 
+Episode 6:Exploring the world
+-two types of Architectures
+    -Monolith
+    -Microservices
+        -single responsibility principle
+        -different tech used for different projects 
+        -mostly adopted
+-Approaches for the API call in React
+    -load -> api call -> render
+    -load -> render -> api call -> render (mostly used and gives better UX)
+-Use of UseEffects() hook
+    -It takes two arguments one function and other array.
+    -whenever we need to do something after the element is rendered it goes inside this hook function.
+-fetch returns a promise.
+-CORS policy(Cross Origin Resource Sharing)-It is a browser restriction for the cross origin calls.
+-Shimmer component -
+    -most of web pages use the shimmer for better UX as it loads a fake feed page while making a API call.
+-Whenever the useState() used to update a variable it rerender the components fromwhere it is been called not the whole page reloaded.
+-Also the useState() variable is declared as const it can be updated unlike the js. here whenever we render the component the value of the variable is changed while declaring so a new const varible with the updated value is created.
+- Also the diff algorithm give the part of the code or div which is being changed and only that is rerendered in the react, that is why the react is fast while updating.
+-Whenever the state variable update react triggers the reconcillaition cycle.
