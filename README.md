@@ -130,3 +130,57 @@ Episode 6:Exploring the world
 -Also the useState() variable is declared as const it can be updated unlike the js. here whenever we render the component the value of the variable is changed while declaring so a new const varible with the updated value is created.
 - Also the diff algorithm give the part of the code or div which is being changed and only that is rerendered in the react, that is why the react is fast while updating.
 -Whenever the state variable update react triggers the reconcillaition cycle.
+
+Episode 7:Finding the path
+-More about the Hooks
+    -UseState():
+        - they should be declared at start of the component.
+        -It is used for storing local state varibales.
+        -Never use it in the conditional statements or loops.
+
+    -UseEffect():
+        -Ex. const [callbackFunction(),[dependencyArray]]
+        -dependency array contains the state variable.
+        -If we do not pass the dependecy array to the useEffect() => it gets executed whenever the component is rendered.
+        -If we pass the empty dependecy array to the useEffect() => it gets executed only once, when the component is rendered for first time.
+        -If we pass the dependecy array to the useEffect() => it gets executed whenever the dependency gets updated.
+-React Router DOM
+    -instaling command "npm i react-router-dom"
+    -React router dom is the library used for the adding the routes in the react.
+    -For providing the route, you need two components from the react router dom
+        -createBrowserRouter
+            -This is the recommended router for all React Router web projects.
+            -It takes a array of objects containing the path, element, errorElement.
+            -const router = createBrowserRouter([
+                {   
+                        path:"/",
+                        element:<AppLayout/>,
+                        errorElement:<Error/>
+                    },
+                    {   
+                        path:"/about",
+                        element:<About/>
+                    },
+                    {   
+                        path:"/contact",
+                        element:<Contact/>
+                    },
+                ])
+        -RouterProvider
+            -(<RouterProvider router={router}/>)
+            -Router Provider is passed to the render method of the root.
+            -it takes the router object as a argument created using the createBrowserRouter.
+    -UseRouteError()
+        -It is a react hook used for getting the info the error.
+        -It can be used in the Error component for geting info about the error.
+    -If you want to make the component replace another component in the react, it can be done with the help of the children components and outlet.
+    -Simply you need to add the children component in the children elements of the createBrowserRouter() array. and add the oulet component in the place of the component which you want to replace.
+    -this setup allows you to replace the components in the react project which give you feels like you have moved to different page but are on the same page just component is replaced with the another one. so the reloading of the other component does not happen and also the replacement takes place quicker and is really fast. It is also the reason why the react is fast. and is a single page application.
+    -Linking of the pages to the elements in the react is done with link component provided react router dom. unlike the anchor tag.
+    -anchor tag reloads the whole page unlike the Link it uses similar props like anchor as href, it uses to.
+    -There are two types of routing the Web application.
+     -Server Side Routing.(It is expensive as call to the server is made then it returns the html page and it gets rendered. was used earlier)
+     -Client side Routing.(It is used in the React, as it uses the components routing). 
+
+    
+        
