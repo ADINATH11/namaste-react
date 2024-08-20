@@ -184,3 +184,35 @@ Episode 7:Finding the path
 
     
         
+Episode 8: Lets get Classy!
+
+-The components in the React can be made using two methods like
+    -functional classes
+    -component classes
+-The component classes in the react are made by extending the React.component 
+-There is the render method inside where the JSX code for the component goes.
+-If we want to pass the props to the component class it is done with the help of the constructor.
+-The cpnstructor is called whenever the instance of the class is made i.e whenever the componet is created.
+-The constructor is called first and then the render method is called.
+-Inside the constructor we have to give the super(props) in order to use this.props.
+-It also enable you to use the props from the parent and also the props additionally given to it while declaring the component.
+-Using the state variables in the component class is done by giving all the varibles in the this.state and with its default values. Also unlike the functional components we do not need to give different useState() for multiple varibles, here all the state variable are declared inside the one object.
+-while changing the values of the state variable you just need to use the setState()method which takes the whole updated obejct.
+-Component lifecycle: constructor => render => componentDidMount() in functional components useState() =>render() => useEffect().
+-for the child components parent constructor => parent render => child construtor => child render => child componentDidMount() => parent componentDidMount().
+-the componentDidMount is used for the api calls ust like the useEffects() as it the one which is called at last.
+-for looking into the lifecycle of the component refer to this diagram : https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+-the constructor and rendering of the components both parent and the child takes place sequencially but the componentDidMount gets processed in the batches.
+-the lifecycle of the component can be explained with the two processes.
+    -render phase
+        -here the constructor is called with the default values.
+        -then the render is called and the component is rendered on the web page.
+        -this process is applied to all the components i.e the parent and children components
+        -this ends the render phase.
+    -commit phase
+         -here the component is already displayed on the web page i.e the DOM is already manipulated.
+         -Now the componentDidMount is called for all the components .
+-The componentDidMount does not work same as the useEffect().
+-As the useEffect() uses the dependency array for when to call the useEffect()(It is called when the local state variable mentioned in the dependency are changed or else it does not call it, it is call only once while rendering when we give empty [], and every it get renders when we do not pass the array to it) componentDidMount is called only once whenever the component is rendered afterwise the componentDidUpdate is called. there if you want to check the state variables are changed it can be done by using the if wlse statements.
+-the componentDidUnmount is called whenever the new componet is rendered in place of the same component.
+-here we specify the cleanup of the things which have been done wile mounting and updating the component.

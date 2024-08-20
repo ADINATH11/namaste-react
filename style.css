@@ -81,3 +81,7 @@
 .filter-container{
     display: flex;
 }
+
+.user-card{
+    border: solid 1px black;
+}
